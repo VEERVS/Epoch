@@ -1,10 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-/**
- * @title ChronoVault
- * @dev Decentralized Time Capsule using IPFS for storage and keccak256 for password hashing.
- */
 contract ChronoVault {
     struct Capsule {
         address creator;

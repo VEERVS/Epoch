@@ -43,9 +43,7 @@ contract ChronoVault {
         return capsule.ipfsCID;
     }
 
-    /**
-     * @dev Returns the visual rarity tier based on the age of the capsule.
-     */
+
     function getRarity(uint256 id) external view returns (uint8 tier, string memory title) {
         Capsule memory capsule = capsules[id];
         uint256 age = block.timestamp - capsule.createdAt;

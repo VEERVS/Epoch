@@ -26,11 +26,7 @@ contract ChronoVault {
         });
     }
 
-    /**
-     * @dev Unlocks a sealed time capsule if conditions are met.
-     * @param id The ID of the capsule to unlock.
-     * @param password The plaintext password to verify against the stored hash.
-     */
+  
     function unlock(uint256 id, string calldata password) external returns (string memory ipfsCID) {
         Capsule storage capsule = capsules[id];
 

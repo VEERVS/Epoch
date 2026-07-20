@@ -14,12 +14,6 @@ contract ChronoVault {
     mapping(uint256 => Capsule) public capsules;
     uint256 public nextCapsuleId;
 
-    /**
-     * @dev Seals a new time capsule.
-     * @param ipfsCID The IPFS Content Identifier where the encrypted file is stored.
-     * @param unlockTime The Unix timestamp when the capsule can be unlocked.
-     * @param passwordHash The keccak256 hash of the decryption password.
-     */
     function seal(string calldata ipfsCID, uint256 unlockTime, bytes32 passwordHash) external returns (uint256 id) {
         id = nextCapsuleId++;
         capsules[id] = Capsule({
